@@ -1,0 +1,14 @@
+.container_results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.individual {
+    display: flex;
+    gap: 15px;
+}
+
+.individual p {
+    margin-bottom: 15px;
+}
