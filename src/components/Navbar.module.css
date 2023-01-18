@@ -1,0 +1,40 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #3a93c3;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo span {
+    font-size: 1.3em;
+    font-weight: 700;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 12px;
+}
+
+ul a {
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 600;
+    transition: .4s;
+}
+
+ul a:hover {
+    color: #f4bb35;
+
+}
