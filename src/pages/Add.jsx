@@ -35,7 +35,7 @@ const Add = () => {
 		const fullIdCode = team.toString() + "_" + threeDigits.toString() + "_" + dateCode
 
 		result.concludes.push(fullIdCode)
-		
+
 		await fetch(`http://localhost:3000/results/${result.id}`,
 			{
 				method: "PATCH",
