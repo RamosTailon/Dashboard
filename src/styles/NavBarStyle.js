@@ -6,7 +6,7 @@ const NavbarStyle = styled.nav`
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
-    background-color: #3a93c3;
+    background-color: ${props => props.theme.theme.navbar_color};
 
     .logo {
         display: flex;

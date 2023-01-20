@@ -10,7 +10,7 @@ import NavbarStyle from '../styles/NavBarStyle'
 const Navbar = ({ toggleTheme }) => {
 	const [checked, setChecked] = useState(false);
 
-	toggleTheme = checked
+
 
 	return (
 		<NavbarStyle>
@@ -19,10 +19,11 @@ const Navbar = ({ toggleTheme }) => {
 				<span>Results Reports</span>
 			</div>
 			<ul>
-				<li><Link to='/results'>Resultados</Link></li>
+				<li><Link to='/'>Resultados</Link></li>
 				<li><Link to='/add'>Adicionar</Link></li>
 				<li>
-					<ThemeSwitcher check={(e) => setChecked(e.target.checked)} />
+					{/* <ThemeSwitcher check={(e) => console.log(e.target.checked)} /> */}
+					<button onClick={toggleTheme}>Mudar</button>
 				</li>
 			</ul>
 		</NavbarStyle>

@@ -46,7 +46,7 @@ const Add = () => {
 			})
 			.then(resp => {
 				resp.json()
-				navigate('/results')
+				navigate('/')
 			})
 
 			.catch(err => console.log(err))

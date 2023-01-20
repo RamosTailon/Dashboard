@@ -13,28 +13,36 @@ import Footer from './components/Footer';
 //STYLES
 import * as themes from './styles/themes'
 import ThemeContext from './styles/themes/context';
+import { ThemeProvider } from 'styled-components';
 
 function App() {
 
-  let state = {
+  const [state, setState] = useState({
     theme: themes.light
-  };
+  });
+
 
   let toggleT = () => {
-
+    setState({ theme: state.theme === themes.light ? themes.dark : themes.light })
   }
 
   return (
     <div className="App">
       <BrowserRouter>
         <ThemeContext.Provider value={state}>
-          <Navbar toggleTheme={toggleT} />
-          <Container>
-            <Routes>
-              <Route path='/results' element={<Results />} />
-              <Route path='/add' element={<Add />} />
-            </Routes>
-          </Container>
+          <ThemeContext.Consumer>
+            {theme => (
+              <ThemeProvider theme={theme}>
+                <Navbar toggleTheme={toggleT} />
+                <Container>
+                  <Routes>
+                    <Route path='/' element={<Results />} />
+                    <Route path='/add' element={<Add />} />
+                  </Routes>
+                </Container>
+              </ThemeProvider>
+            )}
+          </ThemeContext.Consumer>
           <Footer />
         </ThemeContext.Provider>
       </BrowserRouter>
