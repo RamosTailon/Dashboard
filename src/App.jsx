@@ -10,19 +10,33 @@ import Container from './components/Container';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
+//STYLES
+import * as themes from './styles/themes'
+import ThemeContext from './styles/themes/context';
+
 function App() {
+
+  let state = {
+    theme: themes.light
+  };
+
+  let toggleT = () => {
+
+  }
 
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
-        <Container>
-          <Routes>
-            <Route path='/results' element={<Results />} />
-            <Route path='/add' element={<Add />} />
-          </Routes>
-        </Container>
-        <Footer />
+        <ThemeContext.Provider value={state}>
+          <Navbar toggleTheme={toggleT} />
+          <Container>
+            <Routes>
+              <Route path='/results' element={<Results />} />
+              <Route path='/add' element={<Add />} />
+            </Routes>
+          </Container>
+          <Footer />
+        </ThemeContext.Provider>
       </BrowserRouter>
     </div>
   )
