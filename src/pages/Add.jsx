@@ -1,7 +1,8 @@
-import styles from './Add.module.css'
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+//CSS
+import AddStyle from '../styles/AddStyle';
 
 const Add = () => {
 	const [employed, setEmployed] = useState('Ob_1345s');
@@ -53,15 +54,15 @@ const Add = () => {
 	}
 
 	return (
-		<div className={styles.container_task}>
+		<AddStyle >
 			<h1>Adicionar Tarefa</h1>
-			<form className={styles.form_task} onSubmit={handleSubmit}>
+			<form className="form_task" onSubmit={handleSubmit}>
 				<label htmlFor="member">
 					Membro da equipe:
 					<select
 						name="member"
 						id="member_select"
-						className={styles.select}
+						className="select"
 						onChange={(e) => setEmployed(e.target.value)}
 					>
 						<option value="Ob_1345s">Sandra Joyce</option>
@@ -75,7 +76,7 @@ const Add = () => {
 					<select
 						name="task"
 						id="task_select"
-						className={styles.select}
+						className="select"
 						onChange={(e) => setTeam(e.target.value)}
 					>
 						<option value="gab1">gab1</option>
@@ -85,7 +86,7 @@ const Add = () => {
 				</label>
 				<input type="submit" value="Enviar" />
 			</form>
-		</div>
+		</AddStyle>
 	)
 }
 

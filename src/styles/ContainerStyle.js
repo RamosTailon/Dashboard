@@ -7,6 +7,7 @@ const ContainerStyle = styled.div`
     max-width: 1080px;
     margin: 0 auto;
     background-color: ${props => props.theme.theme.body_primary};
+    color:${props => props.theme.theme.font_color};
 `
 
 export default ContainerStyle
