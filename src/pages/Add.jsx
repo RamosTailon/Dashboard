@@ -20,7 +20,7 @@ const Add = () => {
 
 	useEffect(() => {
 		fetchDataResults();
-	}, [result]);
+	}, [employed]);
 
 	async function handleSubmit(e) {
 		e.preventDefault()

@@ -22,8 +22,16 @@ function App() {
   });
 
 
-  let toggleT = () => {
-    setState({ theme: state.theme === themes.light ? themes.dark : themes.light })
+  // let toggleT = () => {
+  //   setState({ theme: state.theme === themes.light ? themes.dark : themes.light })
+  // }
+
+  let imprimir = (e) => {
+    if (e.target.checked) {
+      setState({ theme: themes.dark })
+    } else if (!e.target.checked) {
+      setState({ theme: themes.light })
+    }
   }
 
   return (
@@ -33,7 +41,7 @@ function App() {
           <ThemeContext.Consumer>
             {theme => (
               <ThemeProvider theme={theme}>
-                <Navbar toggleTheme={toggleT} />
+                <Navbar  testChecked={imprimir} />
                 <Container>
                   <Routes>
                     <Route path='/' element={<Results />} />

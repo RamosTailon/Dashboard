@@ -7,9 +7,7 @@ import ThemeSwitcher from './ThemeSwitcher'
 //CSS
 import NavbarStyle from '../styles/NavBarStyle'
 
-const Navbar = ({ toggleTheme }) => {
-	const [checked, setChecked] = useState(false);
-
+const Navbar = ({ testChecked }) => {
 
 
 	return (
@@ -22,8 +20,8 @@ const Navbar = ({ toggleTheme }) => {
 				<li><Link to='/'>Resultados</Link></li>
 				<li><Link to='/add'>Adicionar</Link></li>
 				<li>
-					{/* <ThemeSwitcher check={(e) => console.log(e.target.checked)} /> */}
-					<button onClick={toggleTheme}>Mudar</button>
+					<ThemeSwitcher check={testChecked} />
+					{/* <button onClick={toggleTheme}>Mudar</button> */}
 				</li>
 			</ul>
 		</NavbarStyle>
