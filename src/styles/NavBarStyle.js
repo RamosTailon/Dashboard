@@ -12,7 +12,7 @@ const NavbarStyle = styled.nav`
         display: flex;
         align-items: center;
         gap: 20px;
-    }
+    }   
 
     .logo span {
         font-size: 1.3em;
